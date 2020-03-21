@@ -1,4 +1,8 @@
+package curso.servlet;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,12 +16,9 @@ public class AloMundoServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
+		String dataHoraFormatada = LocalDateTime.now().format( DateTimeFormatter.ISO_LOCAL_DATE_TIME);
 		response.getWriter().append("<h1>Alo Mundo</h1>")
-			.append("<p>Contexto: " + request.getContextPath() + "</p>");
-	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException {
-		doGet(request, response);
+			.append("<p>Contexto: " + request.getContextPath() + "</p>")
+			.append("<p>Data/hora: " + dataHoraFormatada + "</p>");
 	}
 }
