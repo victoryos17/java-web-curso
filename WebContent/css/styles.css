@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+table th,td {
+	
+	padding: 5px;
+}
+
+table tr:nth-child(even) {
+  
+  background-color: antiquewhite;
+}
+table th {
+  
+  background-color: aliceblue;
+}
+
+form {
+
+	padding: 10px;
+	
+}
