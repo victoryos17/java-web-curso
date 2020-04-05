@@ -20,12 +20,6 @@ public class Curso {
 		this.nome = nome;
 	}
 	
-	public Curso(String sigla, String nome, SortedSet<Topico> topicos) {
-
-		this.sigla = sigla;
-		this.nome = nome;
-	}
-	
 	public boolean adicionarTopico( Topico topico) {
 		
 		return topicos.add( topico);
@@ -65,15 +59,14 @@ public class Curso {
 		
 		this.nome = nome;
 	}
-	
+
 	@Override
 	public int hashCode() {
-		
-		return Objects.hash(nome, sigla);
+		return Objects.hash(id, nome, sigla);
 	}
+
 	@Override
 	public boolean equals(Object obj) {
-		
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -81,6 +74,7 @@ public class Curso {
 		if (getClass() != obj.getClass())
 			return false;
 		Curso other = (Curso) obj;
-		return Objects.equals(nome, other.nome) && Objects.equals(sigla, other.sigla);
+		return Objects.equals(id, other.id) && 
+				Objects.equals(nome, other.nome) && Objects.equals(sigla, other.sigla);
 	}
 }
