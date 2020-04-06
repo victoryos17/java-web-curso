@@ -56,9 +56,6 @@
 								</form>							
 							</c:otherwise>
 						</c:choose>
-						<c:if test="${!aluno.concluidos.contains(topico)}">
-
-						</c:if>
 					</td>
 				</tr>
 			</c:forEach>

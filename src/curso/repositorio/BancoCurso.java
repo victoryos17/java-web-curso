@@ -15,12 +15,9 @@ public class BancoCurso {
 			props.put( "user", "root");
 			props.put( "password", "javawebcurso");
 			return drv.connect( "jdbc:mysql://localhost/curso", props);
-			
-			//return DriverManager.getConnection( "jdbc:mysql://localhost/curso", "root", "javawebcurso");
 		} catch (SQLException e) {
 			
 			throw new RuntimeException( e);
 		}
 	}
-
 }

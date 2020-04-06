@@ -67,8 +67,6 @@ public class CursoRepo {
 			boolean continua = rs.next();
 			if( continua) {
 				
-				// TODO refatorar
-				
 				Curso curso = new Curso( idCurso, rs.getString("c.sigla"), rs.getString("c.nome"));
 				do {
 					
